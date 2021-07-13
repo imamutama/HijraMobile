@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HijraMobile"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="69.319">
+    <properties></properties>
+
+
+
+            <testcase
+                name="transferHijra"
+                time="37.054"
+                classname="test.Transaction.TransferToHijra">
+            </testcase>
+            <testcase
+                name="loginValid"
+                time="16.225"
+                classname="test.Transaction.TransferToHijra">
+            </testcase>
+            <testcase
+                name="startActivityBahasa"
+                time="12.495"
+                classname="test.Transaction.TransferToHijra">
+            </testcase>
+            <testcase
+                name="skipCarousel"
+                time="3.545"
+                classname="test.Transaction.TransferToHijra">
+            </testcase>
+</testsuite>
