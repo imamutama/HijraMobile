@@ -78,6 +78,7 @@ public class ForgotHijraController extends BaseController {
     public ForgotHijraController valdiationHijraIDDisplay(){
         Assert.assertTrue(waitVisibility(forgotHijraPage.getValidationHijraIDDisplay()).isDisplayed());
         return this;
+
     }
 
     @Step("Back Login Page")
