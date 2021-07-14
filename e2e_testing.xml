@@ -6,7 +6,7 @@
 <!--        <classes>-->
 <!--            <class name="test.OnBoarding.OnBoardingSuccessTest"></class>-->
 <!--        </classes>-->
-<!--&lt;!&ndash;    </test>&ndash;&gt;-->
+<!--    </test>-->
 <!--    <test name="Login Success">-->
 <!--        <classes>-->
 <!--            <class name="test.OnBoarding.LoginSucces"></class>-->
@@ -14,7 +14,7 @@
 <!--    </test>-->
     <test name="Transfer To HIjra">
         <classes>
-            <class name="test.Transaction.TransferToHijra"></class>
+            <class name="test.Transaction.TransferToHijraTest"></class>
         </classes>
     </test>
 </suite>

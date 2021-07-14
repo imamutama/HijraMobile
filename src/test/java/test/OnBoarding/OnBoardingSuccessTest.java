@@ -92,7 +92,7 @@ public class OnBoardingSuccessTest extends BaseTest {
         otpController
                 .validationCitcall(validationCitcall)
                 .getOtp();
-        GeneratedUtils.sleep(3000);
+        GeneratedUtils.sleep(2000);
     }
 
     @Test(priority = 5)
@@ -128,7 +128,7 @@ public class OnBoardingSuccessTest extends BaseTest {
                 .input_nama(vp.getNameKtp())
                 .set_day(vp.getDay(), vp.getMonth(), vp.getYears())
                 .click_gunakan();
-        GeneratedUtils.sleep(3000);
+        GeneratedUtils.sleep(2000);
     }
 
     @Test(priority = 8)
@@ -139,14 +139,21 @@ public class OnBoardingSuccessTest extends BaseTest {
         selfieController = new SelfieController(driver);
         selfieController
                 .take_Selfie();
-        selfieWithKtpController = new SelfieWithKtpController(driver);
-        selfieWithKtpController
-                .take_SelfieKtp();
-
         GeneratedUtils.sleep(3000);
     }
 
     @Test(priority = 9)
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Take selfie with KTP")
+    @Story("HIJRA-237 [Android-FE] Information Input Review Page - As a user, I want to be able to review and edit the required information inputted by the auto-fill and myself, so that I can ensure the information is correct.")
+    public void takeSelfieKtp() throws Exception {
+        selfieWithKtpController = new SelfieWithKtpController(driver);
+        selfieWithKtpController
+                .take_SelfieKtp();
+        GeneratedUtils.sleep(2000);
+    }
+
+    @Test(priority = 10)
     @Severity(SeverityLevel.NORMAL)
     @Description("Create Signature with upload, camera and touch ")
     @Story("HIJRA-488 [Android-FE] Signature Input - As a user, I want to be able to input signature as KYC process, so that I can continue my sign-up process")
@@ -155,10 +162,10 @@ public class OnBoardingSuccessTest extends BaseTest {
         signatureController
                 .signatureThread()
                 .lanjut_signature();
-        GeneratedUtils.sleep(3000);
+        GeneratedUtils.sleep(2000);
     }
 
-    @Test(priority = 10)
+    @Test(priority = 11)
     @Severity(SeverityLevel.CRITICAL)
     @Description("Validation Next Step Review Data")
     @Story("HIJRA-237 [Android-FE] Information Input Review Page - As a user, I want to be able to review and edit the required information inputted by the auto-fill and myself, so that I can ensure the information is correct.")
@@ -169,7 +176,7 @@ public class OnBoardingSuccessTest extends BaseTest {
 
     }
 
-    @Test(priority = 11)
+    @Test(priority = 12)
     @Severity(SeverityLevel.CRITICAL)
     @Description("Review Data has been successfully input")
     @Story("HIJRA-237 [Android-FE] Information Input Review Page - As a user, I want to be able to review and edit the required information inputted by the auto-fill and myself, so that I can ensure the information is correct.")
@@ -192,7 +199,7 @@ public class OnBoardingSuccessTest extends BaseTest {
         GeneratedUtils.sleep(2000);
     }
 
-    @Test(priority = 12)
+    @Test(priority = 13)
     @Severity(SeverityLevel.CRITICAL)
     @Description("Validation Personal Info")
     @Story("HIJRA-293 [Android-FE] Personal Info - As a user, I want to fill out the additional information about my current state, so that I might use that data to access more financial products.")
@@ -202,7 +209,7 @@ public class OnBoardingSuccessTest extends BaseTest {
                 .validation_informasi();
     }
 
-    @Test(priority = 13)
+    @Test(priority = 14)
     @Severity(SeverityLevel.CRITICAL)
     @Description("Personal Info has been successfully input")
     @Story("HIJRA-293 [Android-FE] Personal Info - As a user, I want to fill out the additional information about my current state, so that I might use that data to access more financial products.")

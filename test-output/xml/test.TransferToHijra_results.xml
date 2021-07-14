@@ -12,21 +12,21 @@
             <testcase
                 name="transferHijra"
                 time="37.054"
-                classname="test.Transaction.TransferToHijra">
+                classname="test.Transaction.TransferToHijraTest">
             </testcase>
             <testcase
                 name="loginValid"
                 time="16.225"
-                classname="test.Transaction.TransferToHijra">
+                classname="test.Transaction.TransferToHijraTest">
             </testcase>
             <testcase
                 name="startActivityBahasa"
                 time="12.495"
-                classname="test.Transaction.TransferToHijra">
+                classname="test.Transaction.TransferToHijraTest">
             </testcase>
             <testcase
                 name="skipCarousel"
                 time="3.545"
-                classname="test.Transaction.TransferToHijra">
+                classname="test.Transaction.TransferToHijraTest">
             </testcase>
 </testsuite>

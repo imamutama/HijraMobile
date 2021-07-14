@@ -1,6 +1,4 @@
 package helper;
-
-import org.aspectj.weaver.ast.Var;
 import utils.VariableProperties;
 
 import java.sql.*;

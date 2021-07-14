@@ -18,13 +18,42 @@ public class TransferHijraPage {
     private By alertNominalNull = By.xpath("//android.widget.TextView[@text = 'Nominal Isi dulu ya']");
     private By validationDetail = By.xpath("//android.widget.TextView[@text = '']");
     private By btnLanjutaKirim = By.xpath("//android.widget.TextView[@text = 'Lanjut Kirim']");
-    private By btnUsePassword = By.xpath("//android.widget.TextView[@text = 'use password']");
+    private By btnUsePassword = By.xpath("//android.widget.TextView[@text = 'Gunakan password']");
     private By inputPass = By.xpath("//android.widget.EditText");
     private By kirimSekarang = By.xpath("//android.widget.TextView[@text = 'Kirim Sekarang']");
     private By alertPassNull = By.xpath("//android.widget.TextView[@text = 'Isi dulu ya']");
-    private By alertPassInvalid = By.xpath("//android.widget.TextView[@text = 'Terjadi kesalahan']");
     private By validationRekPenerima = By.xpath("//android.view.ViewGroup[2]/android.widget.TextView[2]");
     private By validaitonNRekPengirim = By.xpath("//android.view.ViewGroup[5]/android.widget.TextView[2]");
+    private By btnKembaliHome = By.xpath("//android.widget.TextView[@text = 'Kembali ke Homepage']");
+    private By lihatReceipt = By.xpath("//android.widget.TextView[@text = 'Lihat Receipt']");
+    private By statusTransfer = By.xpath("//android.widget.TextView[@text = 'Transaksi Berhasil']");
+    private By listRiwayatTf = By.xpath("//android.widget.ScrollView/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup");
+    private By validationInvalidrekID = By.xpath("//android.widget.TextView[@text = 'Nomor rekening tidak ditemukan']");
+    private By validaitonPassinvalid = By.xpath("/android.widget.TextView[@text = 'Password salah']");
+
+    public By getValidaitonPassinvalid() {
+        return validaitonPassinvalid;
+    }
+
+    public By getValidationInvalidrekID() {
+        return validationInvalidrekID;
+    }
+
+    public By getListRiwayatTf() {
+        return listRiwayatTf;
+    }
+
+    public By getStatusTransfer() {
+        return statusTransfer;
+    }
+
+    public By getLihatReceipt() {
+        return lihatReceipt;
+    }
+
+    public By getBtnKembaliHome() {
+        return btnKembaliHome;
+    }
 
     public By getValidationRekPenerima() {
         return validationRekPenerima;
@@ -94,7 +123,4 @@ public class TransferHijraPage {
         return alertPassNull;
     }
 
-    public By getAlertPassInvalid() {
-        return alertPassInvalid;
-    }
 }

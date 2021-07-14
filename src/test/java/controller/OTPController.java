@@ -1,12 +1,11 @@
 package controller;
 
-import controller.OnBoarding.Register.RegisterDataController;
 import helper.DatabaseConnection;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Step;
 import org.testng.Assert;
-import pages.OnBoarding.OtpPage;
+import pages.OtpPage;
 import utils.GeneratedUtils;
 import utils.VariableProperties;
 

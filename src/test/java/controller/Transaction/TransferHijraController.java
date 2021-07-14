@@ -17,6 +17,7 @@ import java.sql.SQLException;
 public class TransferHijraController extends BaseController {
     private TransferHijraPage transferHijraPage = new TransferHijraPage();
     private HomePageTransaction homePageTransaction = new HomePageTransaction();
+    String textValidation;
 
     public TransferHijraController(AndroidDriver<MobileElement> driver) {
         super(driver);
@@ -88,9 +89,9 @@ public class TransferHijraController extends BaseController {
             String textPengirim = String.valueOf(DatabaseConnection.QuerySql(getPengirim, 1));
             System.out.println(DatabaseConnection.QuerySql(getPengirim, 1) + " && " + DatabaseConnection.QuerySql(getPenerima, 1));
             String ValidationRekPenerima = readText(transferHijraPage.getValidationRekPenerima());
-            String ValidationRekPengirim = readText(transferHijraPage.getValidationRekPenerima());
-            Assert.assertEquals(ValidationRekPenerima,textPenerima);
-            Assert.assertEquals(ValidationRekPengirim,textPengirim);
+            String ValidationRekPengirim = readText(transferHijraPage.getValidaitonNRekPengirim());
+            Assert.assertEquals(ValidationRekPenerima, textPenerima);
+            Assert.assertEquals(ValidationRekPengirim, textPengirim);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -118,6 +119,88 @@ public class TransferHijraController extends BaseController {
     @Step("Transfer dilakukan")
     public TransferHijraController kirimSekarang() {
         click(transferHijraPage.getKirimSekarang());
+        return this;
+    }
+
+    @Step("Transfer Status")
+    public TransferHijraController statusTransfer(String validationStatus) {
+        textValidation = readText(transferHijraPage.getStatusTransfer());
+        Assert.assertEquals(textValidation, validationStatus);
+        return this;
+    }
+
+    @Step("Kembali Homepage")
+    public TransferHijraController backHome() {
+        click(transferHijraPage.getBtnKembaliHome());
+        return this;
+    }
+
+    @Step("Lihat Receipt")
+    public TransferHijraController viewReceipt() {
+        click(transferHijraPage.getLihatReceipt());
+        return this;
+    }
+
+    @Step("scrollText")
+    public TransferHijraController scrollText(String text) {
+        scrollAndClickBytext(text);
+        return this;
+    }
+
+    @Step("Transfer via riwayat transfer")
+    public TransferHijraController riwayatTransfer() {
+        click(transferHijraPage.getListRiwayatTf());
+        return this;
+    }
+
+    @Step("Validation Hijra ID / Rekening Null")
+    public TransferHijraController validationRekIdNull(String hijraNull) {
+        textValidation = readText(transferHijraPage.getAlertHijraNull());
+        Assert.assertTrue(textValidation.equalsIgnoreCase(hijraNull));
+        return this;
+    }
+
+    @Step("Validation Hijra ID / Rekening Invalid")
+    public TransferHijraController validationRekIdInvalid(String hijraInvalid) {
+        textValidation = readText(transferHijraPage.getValidationInvalidrekID());
+        Assert.assertTrue(textValidation.equalsIgnoreCase(hijraInvalid));
+        return this;
+    }
+
+    @Step("Validation Nominal Null")
+    public TransferHijraController validationNominalNull(String nominalNull) {
+        textValidation = readText(transferHijraPage.getAlertNominalNull());
+        Assert.assertTrue(textValidation.equalsIgnoreCase(nominalNull));
+        return this;
+    }
+
+    @Step("Validation Nominal limit")
+    public TransferHijraController validationNominalLimit(String nominalLimit) {
+        textValidation = readText(transferHijraPage.getAlertNominalNull());
+        Assert.assertTrue(textValidation.equalsIgnoreCase(nominalLimit));
+        return this;
+    }
+
+//    @Step("Invalid Pin 3x")
+//    public TransferHijraController validationInvalidPin3x(String validationPinReset) {
+//        if (readText(transferHijraPage.getAkunTerkunci()).equalsIgnoreCase("Akun terkunci sementara")) {
+//            textValidation = readText(transferHijraPage.getPinInvalid3x());
+//            Assert.assertTrue(textValidation.equalsIgnoreCase(validationPinReset));
+//            click(transferHijraPage.getKeluarApp());
+//        }
+//        return this;
+//    }
+
+    @Step("Validation Password Null")
+    public TransferHijraController validationPassNull(String passNull) {
+        textValidation = readText(transferHijraPage.getAlertPassNull());
+        Assert.assertTrue(textValidation.equalsIgnoreCase(passNull));
+        return this;
+    }
+    @Step("Validation Password Invalid")
+    public TransferHijraController validationPassinvalid(String passInvalid) {
+        textValidation = readText(transferHijraPage.getValidaitonPassinvalid());
+        Assert.assertTrue(textValidation.equalsIgnoreCase(passInvalid));
         return this;
     }
 

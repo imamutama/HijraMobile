@@ -114,19 +114,4 @@ public class LoginInvalidTest extends BaseTest {
                 .akunNotVerifikasi(validationNotVerfikasi);
     }
 
-//    @Test(priority = 7)
-//    @Severity(SeverityLevel.NORMAL)
-//    @Description("Enabling users to log in or sign-up to the account.")
-//    @Story("HIJRA-45 [Android-FE] Sign-up and Login Page - As a user, I want to be presented with a login and sign-up page when I open the app so that I can start using my account.")
-//    public void loginValid() throws IOException {
-//        loginController = new LoginController(driver);
-//        loginController
-//                .clear_Hijra()
-//                .inputID(vp.getHijraID())
-//                .clear_Password()
-//                .inputPassword(vp.getPassword())
-//                .checkbox()
-//                .click_buttonMasuk();
-//    }
-
 }
