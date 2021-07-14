@@ -24,7 +24,7 @@ public class TestDatabase {
     @org.testng.annotations.Test
     public void testDB() throws SQLException, IOException {
         DatabaseConnection.DBConnect();
-        String sql = "SELECT generated_token FROM otp_token WHERE user_id IN(SELECT user_id FROM user_login WHERE username = 'Akuntransfer8')";
+        String sql = "SELECT generated_token FROM otp_token WHERE user_id IN(SELECT user_id FROM user_login WHERE username = 'Akuntransfer8 ')";
         System.out.println(DatabaseConnection.QuerySql(sql,1));
         String testString = String.valueOf(DatabaseConnection.QuerySql(sql,1));
         String[] as = {testString};

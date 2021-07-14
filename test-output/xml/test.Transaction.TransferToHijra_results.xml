@@ -19,7 +19,6 @@
             </failure>
     </testcase>
 
-
             <testcase
                 name="loginValid"
                 time="15.937"

@@ -28,3 +28,4 @@ public class ScreenShoot {
         Allure.addAttachment("ScreenShot ",new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
     }
 }
+
