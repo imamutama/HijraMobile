@@ -61,7 +61,8 @@ public class OnBoardingSuccessTest extends BaseTest {
         registerController
                 .click_daftar()
                 .click_mulai()
-                .click_checkbox();
+                .click_checkbox()
+                .click_lanjut();
 
     }
 
@@ -79,7 +80,7 @@ public class OnBoardingSuccessTest extends BaseTest {
                 .scrollNoHp()
                 .inputNoHp(vp.getNoHp())
                 .click_lanjut();
-        GeneratedUtils.sleep(3000);
+        GeneratedUtils.sleep(5000);
     }
 
     @Test(priority = 4)

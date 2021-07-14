@@ -23,6 +23,7 @@ public class OTPController extends BaseController {
     @Step("Validation Citcall")
     public OTPController validationCitcall(String validationCitcall) throws Exception {
         String textValidation = readText(otpPage.getValidationCitcall());
+        System.out.println(textValidation);
         Assert.assertTrue(textValidation.equalsIgnoreCase(validationCitcall));
         click(otpPage.getBtnMissedCall());
         click(otpPage.getAllowPermission());

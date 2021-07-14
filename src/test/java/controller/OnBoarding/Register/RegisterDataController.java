@@ -38,11 +38,11 @@ public class RegisterDataController extends BaseController {
     }
 
     @Step("Pilih checkbox dan klik button lanjut")
-    public RegisterDataController click_checkbox() {
+    public RegisterDataController click_checkbox() throws Exception {
         click(registerDataPage.getCheckBox1());
         click(registerDataPage.getCheckBox2());
         click(registerDataPage.getCheckBox3());
-        click(registerDataPage.getBtnLanjut());
+        GeneratedUtils.sleep(2000);
         return this;
     }
 
@@ -94,7 +94,7 @@ public class RegisterDataController extends BaseController {
     }
 
     @Step("Klik button lanjut")
-    public RegisterDataController click_lanjut() throws InterruptedException {
+    public RegisterDataController click_lanjut() {
         click(registerDataPage.getBtnLanjut());
         return this;
     }
