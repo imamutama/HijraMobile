@@ -4,12 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.599">
+           time="0.805">
     <properties></properties>
+
+
 
             <testcase
                 name="testDB"
-                time="0.599"
-                classname="test.TestDatabase">
+                time="0.805"
+                classname="Mobile.TestDatabase">
             </testcase>
 </testsuite>

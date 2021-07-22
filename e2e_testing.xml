@@ -2,19 +2,49 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="E2E OnBoarding and Transaction" verbose="1" preserve-order="true" thread-count="1" parallel="tests">
     <test name="On Boarding Success">
-        <parameter name="validationCitcall" value="Masukkan 4 digit terakhir nomor yang missed called kamu di bawah."></parameter>
+        <parameter name="validationCitcall"
+                   value="Masukkan 4 digit terakhir nomor yang missed called kamu di bawah."></parameter>
         <classes>
-            <class name="test.OnBoarding.OnBoardingSuccessTest"></class>
+            <class name="Mobile.test.OnBoarding.OnBoardingSuccessTest"></class>
         </classes>
     </test>
-<!--    <test name="Login Success">-->
-<!--        <classes>-->
-<!--            <class name="test.OnBoarding.LoginSucces"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Transfer To HIjra">-->
-<!--        <classes>-->
-<!--            <class name="test.Transaction.TransferToHijraTest"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Transfer To HIjra Use password" preserve-order="true">
+        <parameter name="optionAuth" value="Password"></parameter>
+        <parameter name="validationStatus" value="Transaksi Berhasil"></parameter>
+        <parameter name="idPenerimaReceipt" value="Akuntransfer7"></parameter>
+        <parameter name="rekPenerima" value="Akuntransfer7"></parameter>
+        <parameter name="nominalTf" value="10000"></parameter>
+        <parameter name="catatan" value="Transet to Hijra"></parameter>
+        <classes>
+            <class name="Mobile.test.Transaction.TransferToHijraTest"></class>
+        </classes>
+    </test>
+    <test name="Transfer To HIjra Use PIN" preserve-order="true">
+        <parameter name="optionAuth" value="PIN"></parameter>
+        <parameter name="validationStatus" value="Transaksi Berhasil"></parameter>
+        <parameter name="idPenerimaReceipt" value="Akuntransfer7"></parameter>
+        <parameter name="rekPenerima" value="Akuntransfer7"></parameter>
+        <parameter name="nominalTf" value="10000"></parameter>
+        <parameter name="catatan" value="Transet to Hijra"></parameter>
+        <classes>
+            <class name="Mobile.test.Transaction.TransferToHijraPinTest"></class>
+        </classes>
+    </test>
+    <test name="Detail Transfer IN" preserve-order="true">
+        <parameter name="listInOut" value="Transaksi Masuk"></parameter>
+        <parameter name="userNamePengirim" value="akukua123"></parameter>
+        <parameter name="userDetail" value="akukua123"></parameter>
+        <parameter name="validationSave" value="Bukti transaksi berhasil disimpan"></parameter>
+        <classes>
+            <class name="Mobile.test.Homepage.DetailTransaksiInTest"></class>
+        </classes>
+    </test>
+    <test name="Detail Transfer OUT" preserve-order="true">
+        <parameter name="listInOut" value="Transaksi Keluar"></parameter>
+        <parameter name="userPenerima" value="Akuntransfer7"></parameter>
+        <parameter name="validationSave" value="Bukti transaksi berhasil disimpan"></parameter>
+        <classes>
+            <class name="Mobile.test.Homepage.DetailTransaksiOutTest"></class>
+        </classes>
+    </test>
 </suite>

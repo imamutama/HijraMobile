@@ -58,8 +58,20 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.14.3</version>
-            <scope>test</scope>
+            <scope>Mobile.test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.googlecode/google-api-translate-java -->
+        <dependency>
+            <groupId>com.googlecode</groupId>
+            <artifactId>google-api-translate-java</artifactId>
+            <version>0.92</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-translate</artifactId>
+            <version>1.98.5</version>
+        </dependency>
+
         <dependency>
             <groupId>ru.yandex.qatools.ashot</groupId>
             <artifactId>ashot</artifactId>
@@ -80,6 +92,17 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.3.3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
         <dependency>
@@ -106,7 +129,7 @@
             <groupId>org.testng</groupId>
             <artifactId>reportng</artifactId>
             <version>1.2.2</version>
-            <scope>test</scope>
+            <scope>Mobile.test</scope>
         </dependency>
         <dependency>
             <groupId>io.qameta.allure</groupId>
@@ -129,7 +152,7 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.30</version>
-            <scope>test</scope>
+            <scope>Mobile.test</scope>
         </dependency>
         <dependency>
             <groupId>ru.yandex.qatools.ashot</groupId>
@@ -140,7 +163,7 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.14.1</version>
-            <scope>test</scope>
+            <scope>Mobile.test</scope>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -156,6 +179,11 @@
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-core</artifactId>
             <version>2.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.</groupId>
+            <artifactId>google-api-translate-java</artifactId>
+            <version>0.92</version>
         </dependency>
 
     </dependencies>

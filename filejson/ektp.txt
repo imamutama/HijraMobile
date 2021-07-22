@@ -1,0 +1,24 @@
+{
+  "noKtp": "3475683908475908",
+  "customerName": "Testing API",
+  "tempatLahir": "Jakarta",
+  "tanggalLahir": "2000-02-13",
+  "pekerjaan": "Entreprenuer",
+  "jenisKelamin": "pria",
+  "statusPerkawinan": "single",
+  "namaIbuKandung": "ibu",
+  "address": [
+    {
+      "addressType": "ktp",
+      "alamat": "vip",
+      "rtRw": "001/113",
+      "kelurahan": "kel ktp",
+      "kecamatan": "kec ktp",
+      "kota": "kot ktp",
+      "provinsi": "prov ktp",
+      "kodepos": 13346
+    }
+  ]
+}
+
+07105725

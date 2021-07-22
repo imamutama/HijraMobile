@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing API" verbose="1" preserve-order="true" thread-count="1" parallel="tests">
+<!--    <test name="Registration">-->
+<!--        <parameter name="username" value="testingApi2030"></parameter>-->
+<!--        <parameter name="password" value="Password123"></parameter>-->
+<!--        <parameter name="email" value="test.api2@gmail.com"></parameter>-->
+<!--        <parameter name="regisID" value="2021050715150398"></parameter>-->
+<!--        <parameter name="noHp" value="895403496097"></parameter>-->
+<!--        <parameter name="accType" value="wadiah"></parameter>-->
+<!--        <parameter name="deviceID" value="4501bb912e0679e4"></parameter>-->
+<!--        <parameter name="statusCode" value="00"></parameter>-->
+<!--        <parameter name="description" value="Success Registration, OTP Send"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="API.OnBoarding.Post.RegisDataPost"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Regis Phone Number">-->
+<!--        <parameter name="username" value="testingApi2030"></parameter>-->
+<!--        <parameter name="statusCode" value="00"></parameter>-->
+<!--        <parameter name="description" value="Success, OTP Send"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="API.OnBoarding.Post.RegisPhonePost">-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="OTP Verification">-->
+<!--        <parameter name="username" value="testingApi2030"></parameter>-->
+<!--        <parameter name="statusCode" value="00"></parameter>-->
+<!--&lt;!&ndash;      //  <parameter name="description" value="Success Registration, OTP Send"></parameter>&ndash;&gt;-->
+<!--        <classes>-->
+<!--            <class name="API.OnBoarding.Post.OTPVerifPost">-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Login">-->
+<!--        <parameter name="username" value="testingApi2030"></parameter>-->
+<!--        <parameter name="password" value="Password123"></parameter>-->
+<!--        <parameter name="deviceID" value="4501bb912e0679e4"></parameter>-->
+<!--        <parameter name="statusCode" value="00"></parameter>-->
+<!--        <parameter name="description" value="Success"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="API.OnBoarding.Post.LoginPost"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="EKYC">
+        <parameter name="statusCode" value="00"></parameter>
+<!--        <parameter name="description" value="Success"></parameter>-->
+        <classes>
+            <class name="API.OnBoarding.Post.SubmitEkycPost"></class>
+        </classes>
+    </test>
+    <test name="Selfie">
+        <parameter name="statusCode" value="00"></parameter>
+        <!--        <parameter name="description" value="Success"></parameter>-->
+        <classes>
+            <class name="API.OnBoarding.Post.SubmitSelfiePost"></class>
+        </classes>
+    </test>
+    <test name="EKTP">
+        <parameter name="statusCode" value="00"></parameter>
+        <!--        <parameter name="description" value="Success"></parameter>-->
+        <classes>
+            <class name="API.OnBoarding.Post.SubmitKtpPost"></class>
+        </classes>
+    </test>
+
+    <test name="Signature">
+        <parameter name="statusCode" value="00"></parameter>
+        <!--        <parameter name="description" value="Success"></parameter>-->
+        <classes>
+            <class name="API.OnBoarding.Post.SubmitSignaturePost"></class>
+        </classes>
+    </test>
+
+    <test name="Review Page">
+        <parameter name="statusCode" value="00"></parameter>
+        <!--        <parameter name="description" value="Success"></parameter>-->
+        <classes>
+            <class name="API.OnBoarding.Post.ReviewPagePost"></class>
+        </classes>
+    </test>
+    <test name="Additional Data">
+        <parameter name="statusCode" value="00"></parameter>
+        <!--        <parameter name="description" value="Success"></parameter>-->
+        <classes>
+            <class name="API.OnBoarding.Post.AdditionalDataPost"></class>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,23 @@
+{
+  "noKtp": "3475683908475678",
+  "customerName": "Testing API",
+  "tempatLahir": "Jakarta",
+  "tanggalLahir": "1999-09-20",
+  "statusPerkawinan": "single",
+  "jenisKelamin": "pria",
+  "kewarganegaraan": "Indonesia",
+  "agama": "Islam",
+  "email": "test.api3@gmail.com",
+  "address": [
+    {
+      "addressType": "ktp",
+      "alamat": "vip",
+      "rtRw": "009/013",
+      "kelurahan": "kel ktp",
+      "kecamatan": "kec ktp",
+      "kota": "kot ktp",
+      "provinsi": "prov ktp",
+      "kodepos": 13346
+    }
+  ]
+}

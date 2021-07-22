@@ -8,8 +8,8 @@
     <properties></properties>
 
             <testcase
-                name="test"
+                name="Mobile.test"
                 time="0.512"
-                classname="helper.DatabaseConnection">
+                classname="Mobile.helper.DatabaseConnection">
             </testcase>
 </testsuite>

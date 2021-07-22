@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="E2E OnBoarding and Transaction" verbose="1" preserve-order="true" thread-count="2" parallel="tests">
+    <test name="Transfer To HIjra Use password" preserve-order="true">
+        <parameter name="optionAuth" value="PIN"></parameter>
+        <parameter name="validationStatus" value="Transaksi Berhasil"></parameter>
+        <parameter name="idPenerimaReceipt" value="Akuntransfer7"></parameter>
+        <parameter name="rekPenerima" value="Akuntransfer7"></parameter>
+        <parameter name="nominalTf" value="10000"></parameter>
+        <parameter name="catatan" value="Transfer to Hijra"></parameter>
+        <classes>
+            <class name="Mobile.test.Transaction.TransferToHijraPinTest"></class>
+        </classes>
+    </test>
+</suite>

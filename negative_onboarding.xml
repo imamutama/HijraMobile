@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Continue Registration" verbose="1" preserve-order="true" thread-count="1" parallel="tests">
+    <test name="Register Data" preserve-order="true">
+        <parameter name="formNull" value="Form Isi dulu ya"></parameter>
+        <parameter name="hijraIDNull" value="Hijra ID Isi dulu ya"></parameter>
+        <parameter name="validationHijraEnabled" value="Maaf, Hijra ID sudah terpakai. Coba yang lain ya"></parameter>
+        <parameter name="hijraEnabled" value="Tamaimam14"></parameter>
+        <parameter name="validationHijraInvalid" value="Maaf, belum memenuhi kriteria Hijra ID."></parameter>
+        <parameter name="hijraInvalid" value="tamaimam"></parameter>
+        <parameter name="emailNull" value="Email Isi dulu ya"></parameter>
+        <parameter name="passwordNull" value="Password Isi dulu ya"></parameter>
+        <parameter name="confirmNull" value="Konfirmasi Password Isi dulu ya"></parameter>
+        <parameter name="validationPassInvalid" value="Maaf, belum memenuhi kriteria password."></parameter>
+        <parameter name="passInvalid" value="password"></parameter>
+        <parameter name="validationPassNotSame" value="Password tidak sama"></parameter>
+        <parameter name="passNotSame" value="Passord980"></parameter>
+        <parameter name="noHpNull" value="Nomor Handphone Isi dulu ya"></parameter>
+        <parameter name="validationCitcall"
+                   value="Masukkan 4 digit terakhir nomor yang missed called kamu di bawah."></parameter>
+        <parameter name="validationNoHpEnabled" value="Maaf, nomor handphone sudah terpakai."></parameter>
+        <parameter name="noHpEnabled" value="89540765853"></parameter>
+        <classes>
+            <class name="Mobile.test.OnBoarding.RegisterDataTest"></class>
+        </classes>
+    </test>
+    <test name="Upload Document" preserve-order="true">
+        <parameter name="validationKtpNull" value="Nomor eKTP Isi dulu ya"></parameter>
+        <parameter name="validationNameNull" value="Nama Isi dulu ya"></parameter>
+        <parameter name="validationDateNull" value="Tanggal Lahir Isi dulu ya"></parameter>
+        <parameter name="validationIdInvalid" value="Pastikan Nomor KTP 16 digit"></parameter>
+        <parameter name="validationIdEnabled" value="KTP sudah terdaftar"></parameter>
+        <parameter name="idEnabled" value="1234567890123456"></parameter>
+        <classes>
+            <class name="Mobile.test.OnBoarding.UploadDocumentTest"></class>
+        </classes>
+    </test>
+
+    <test name="Signature Document" preserve-order="true">
+        <classes>
+            <class name="Mobile.test.OnBoarding.SignatureTest"></class>
+        </classes>
+    </test>
+    <test name="Review Data" preserve-order="true">
+        <parameter name="validationTempatNull" value="Tempat Lahir Isi dulu ya"></parameter>
+        <parameter name="validationProvinsiNull" value="Provinsi Isi dulu ya"></parameter>
+        <parameter name="validationKotaNull" value="Kota / Kabupaten Isi dulu ya"></parameter>
+        <parameter name="validationKecamatanNull" value="Kecamatan Isi dulu ya"></parameter>
+        <parameter name="validationKelurahanNull" value="Kelurahan / Desa Isi dulu ya"></parameter>
+        <parameter name="validationRTNull" value="RT / RW Isi dulu ya"></parameter>
+        <parameter name="invalidRT" value="001/01"></parameter>
+        <parameter name="validationRTInvalid" value="Format RT/RW tidak sesuai"></parameter>
+        <parameter name="validationAlamatNull" value="Alamat Isi dulu ya"></parameter>
+        <parameter name="validationStatusNull" value="Status Perkawinan Isi dulu ya"></parameter>
+        <parameter name="validationJenisNull" value="Jenis Kelamin Isi dulu ya"></parameter>
+        <parameter name="validationNationalityNull" value="Kewarganegaraan Isi dulu ya"></parameter>
+        <classes>
+            <class name="Mobile.test.OnBoarding.ReviewDataTest"></class>
+        </classes>
+    </test>
+    <test name="Personal Info" preserve-order="true">
+        <parameter name="validationPendidikan" value="Pendidikan Terakhir Isi dulu ya"></parameter>
+        <parameter name="validationPekerjaan" value="Pekerjaan Isi dulu ya"></parameter>
+        <parameter name="validationJabatan" value="Jabatan Isi dulu ya"></parameter>
+        <parameter name="validationKantor" value="Nama Kantor / Bisnis Isi dulu ya"></parameter>
+        <parameter name="validationAlamat" value="Alamat Kantor / Bisnis Isi dulu ya"></parameter>
+        <parameter name="validationDana" value="Sumber Dana Isi dulu ya"></parameter>
+        <parameter name="validationPenghasilan" value="Total Penghasilan Isi dulu ya"></parameter>
+        <parameter name="validationTujuan" value="Maksud dan Tujuan Isi dulu ya"></parameter>
+        <parameter name="validationIbuKandung" value="Nama Ibu Kandung Isi dulu ya"></parameter>
+        <classes>
+            <class name="Mobile.test.OnBoarding.PersonalInfoTest"></class>
+        </classes>
+    </test>
+    <test name="Login Invalid" preserve-order="true">
+        <parameter name="validationLoginNull" value="Form Isi dulu ya"></parameter>
+        <parameter name="validationHijraNull" value="Hijra ID Isi dulu ya"></parameter>
+        <parameter name="validationPassNull" value="Password Isi dulu ya"></parameter>
+        <parameter name="validationInvalid" value="Hijra ID atau Password salah (1/3)"></parameter>
+        <parameter name="validationNotVerfikasi" value="Akun anda belum terverifikasi"></parameter>
+        <parameter name="idNotVerifikasi" value="Tamaimam14"></parameter>
+        <parameter name="passNotVerifikasi" value="Password123"></parameter>
+        <parameter name="idInvalid" value="flowregi14"></parameter>
+        <parameter name="passInvalid" value="Password12"></parameter>
+        <classes>
+            <class name="Mobile.test.OnBoarding.LoginInvalidTest"></class>
+        </classes>
+    </test>
+    <test name="Forgot Password">
+        <parameter name="validationIdNull" value="Isi dulu ya"></parameter>
+        <parameter name="idNotFound" value="Testing2091"></parameter>
+        <parameter name="validationIdNotfound" value="Username tidak terdaftar"></parameter>
+        <parameter name="formatIncorrect" value="Mobile.test"></parameter>
+        <parameter name="validationFormatIncorrect" value="Maaf, username tidak sesuai syarat."></parameter>
+        <parameter name="validNull" value="Isi dulu ya"></parameter>
+        <parameter name="validationKtpInvalid" value="NIK tidak sesuai!"></parameter>
+        <parameter name="ktpInvalid" value="1234789101176"></parameter>
+        <parameter name="validationIbuInvalid" value="Nama ibu kandung tidak sesuai!"></parameter>
+        <parameter name="ibukandungInvalid" value="Mobile.test"></parameter>
+        <parameter name="validationInvalid" value="NIK dan Nama ibu kandung tidak sesuai!"></parameter>
+        <parameter name="passNull" value="Isi dulu ya"></parameter>
+        <parameter name="passNotsame" value="Password tidak sama"></parameter>
+        <parameter name="confrimInvalid" value="testing 2021"></parameter>
+        <parameter name="mustNumber" value="Password harus terdiri dari angka"></parameter>
+        <parameter name="minimumChar" value="Minimal password 8 karakter"></parameter>
+        <parameter name="inputPassNumber" value="testingaja"></parameter>
+        <parameter name="inputPassChar" value="Mobile.test"></parameter>
+        <parameter name="oldPassword" value="Password baru tidak boleh sama dengan password lama"></parameter>
+        <parameter name="forgotPassSuccess" value="Alhamdulillah, password disimpan!"></parameter>
+        <classes>
+            <class name="Mobile.test.OnBoarding.ForgotPasswordTest"></class>
+        </classes>
+    </test>
+    <test name="Forgot Username">
+        <parameter name="phoneNull" value="Isi dulu ya"></parameter>
+        <parameter name="validationPhoneInvalid" value="8987654321"></parameter>
+        <parameter name="phoneInvalid" value="Nomor handphone tidak terdaftar"></parameter>
+        <parameter name="formatIncorrect" value="123456"></parameter>
+        <parameter name="validationFormatIncorrect" value="Format nomor handphone salah"></parameter>
+        <parameter name="validationKtpInvalid" value="NIK tidak sesuai!"></parameter>
+        <parameter name="ktpInvalid" value="1234789101176"></parameter>
+        <parameter name="validationIbuInvalid" value="Nama ibu kandung tidak sesuai!"></parameter>
+        <parameter name="ibukandungInvalid" value="test"></parameter>
+        <parameter name="validationInvalid" value="NIK dan Nama ibu kandung tidak sesuai!"></parameter>
+        <classes>
+            <class name="Mobile.test.OnBoarding.ForgotHijraIDTest"></class>
+        </classes>
+    </test>
+</suite>

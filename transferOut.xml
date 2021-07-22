@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="E2E OnBoarding and Transaction" verbose="1" preserve-order="true" thread-count="1" parallel="tests">
+    <test name="Detail Transfer OUT" preserve-order="true">
+        <parameter name="listInOut" value="Transaksi Keluar"></parameter>
+        <parameter name="userPenerima" value="Akuntransfer7"></parameter>
+        <parameter name="validationSave" value="Bukti transaksi berhasil disimpan"></parameter>
+        <classes>
+            <class name="Mobile.test.Homepage.DetailTransaksiOutTest"></class>
+        </classes>
+    </test>
+</suite>

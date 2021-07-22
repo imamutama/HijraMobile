@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="E2E OnBoarding and Transaction" verbose="1" preserve-order="true" thread-count="1" parallel="tests">
+        <test name="On Boarding Success">
+            <parameter name="validationCitcall"
+                       value="Masukkan 4 digit terakhir nomor yang missed called kamu di bawah."></parameter>
+            <classes>
+                <class name="Mobile.test.OnBoarding.OnBoardingSuccessTest"></class>
+            </classes>
+        </test>
+</suite>

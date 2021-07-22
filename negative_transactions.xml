@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Negative Case Transactions" verbose="1" preserve-order="true" thread-count="1" parallel="tests">
+    <!--    <test name="Negative Case Transactions Used Password">-->
+    <!--        <parameter name="validationRekNull" value="Hijra ID / Nomor Rekening Isi dulu ya"></parameter>-->
+    <!--        <parameter name="validationRekInvalid" value="Nomor rekening tidak ditemukan"></parameter>-->
+    <!--        <parameter name="rekInvalid" value="test34556"></parameter>-->
+    <!--        <parameter name="rekPenerima" value="Akuntransfer7"></parameter>-->
+    <!--        <parameter name="validationNominalNull" value="Nominal Isi dulu ya"></parameter>-->
+    <!--        <parameter name="validationNominalLimitMin" value="minimal transaksi Rp 10.000"></parameter>-->
+    <!--        <parameter name="validationNominalLimitMax" value="maksimal transaksi Rp. 25.000.000"></parameter>-->
+    <!--        <parameter name="validationParam" value="PIN salah 1/3"></parameter>-->
+    <!--        <parameter name="validationParam1" value="Akun terkunci sementara"></parameter>-->
+    <!--        <parameter name="validationParam2" value="PIN salah sebanyak 3x."></parameter>-->
+    <!--        <parameter name="passNull" value="Isi dulu ya"></parameter>-->
+    <!--        <parameter name="validationFormatInvalid" value="Password Salah"></parameter>-->
+    <!--        <parameter name="formatInvalid" value="123455"></parameter>-->
+    <!--        <parameter name="passLock" value="Akun terkunci sementara"></parameter>-->
+    <!--        <parameter name="validationParam3" value="Password salah sebanyak 3x. Silakan reset password saat log in."></parameter>-->
+    <!--        <parameter name="authOptions" value="Password"></parameter>-->
+    <!--        <classes>-->
+    <!--            <class name="Mobile.test.Transaction.TransferNegativeTest"></class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <test name="Negative Case Transactions Used PIN">
+        <parameter name="validationRekNull" value="Hijra ID / Nomor Rekening Isi dulu ya"></parameter>
+        <parameter name="validationRekInvalid" value="Nomor rekening tidak ditemukan"></parameter>
+        <parameter name="rekInvalid" value="test34556"></parameter>
+        <parameter name="rekPenerima" value="Akuntransfer7"></parameter>
+        <parameter name="validationNominalNull" value="Nominal Isi dulu ya"></parameter>
+        <parameter name="validationNominalLimitMin" value="minimal transaksi Rp 10.000"></parameter>
+        <parameter name="validationNominalLimitMax" value="maksimal transaksi Rp. 25.000.000"></parameter>
+        <parameter name="validationParam" value="PIN salah 1/3"></parameter>
+        <parameter name="validationParam1" value="Akun terkunci sementara"></parameter>
+        <parameter name="validationParam2"
+                   value="PIN salah sebanyak 3x. Silakan reset password saat log in."></parameter>
+        <parameter name="passNull" value="Isi dulu ya"></parameter>
+        <parameter name="validationFormatInvalid" value="Password Salah"></parameter>
+        <parameter name="formatInvalid" value="123455"></parameter>
+        <parameter name="passLock" value="Akun terkunci sementara"></parameter>
+        <parameter name="validationParam3"
+                   value="Password salah sebanyak 3x. Silakan reset password saat log in."></parameter>
+        <parameter name="authOptions" value="PIN"></parameter>
+        <classes>
+            <class name="Mobile.test.Transaction.TransferNegativeTest"></class>
+        </classes>
+    </test>
+</suite>

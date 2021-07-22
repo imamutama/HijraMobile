@@ -12,6 +12,6 @@
             <testcase
                 name="testDB"
                 time="0.616"
-                classname="test.TestDatabase">
+                classname="Mobile.TestDatabase">
             </testcase>
 </testsuite>
